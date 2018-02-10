@@ -26,6 +26,7 @@ public class SearchController {
 
     @RequestMapping(value="results")
     public String results(String searchType, String searchTerm) {
+        JobData.findByColumnAndValue(searchType, searchTerm);
         return "results";
     }
 
