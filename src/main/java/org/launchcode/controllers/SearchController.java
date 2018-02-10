@@ -27,7 +27,7 @@ public class SearchController {
     @RequestMapping(value="results")
     public String results(Model model, String searchType, String searchTerm) {
         model.addAttribute("columns", JobData.findByColumnAndValue(searchType, searchTerm));
-        return "search/results";
+        return "search";
     }
 
 }
