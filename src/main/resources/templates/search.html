@@ -39,7 +39,8 @@
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
 
     <ul>
-        <li th:each="result : ${results}" th:text="${result}"></li>
+        <li th:each="result : ${results}" th:each="thing : ${result}" th:text="${thing}"></li>
+
     </ul>
 
 </div>
